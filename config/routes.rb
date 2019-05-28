@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :welcome
   resources :trainers
   resources :owners
   resources :dog_breeds
