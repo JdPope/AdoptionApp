@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dog.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @dog.age %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @dog.size %>
+</p>
+
+<p>
+  <strong>Kids compatible:</strong>
+  <%= @dog.kids_compatible %>
+</p>
+
+<p>
+  <strong>Pets compatible:</strong>
+  <%= @dog.pets_compatible %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @dog.image_url %>
+</p>
+
+<p>
+  <strong>Fixed:</strong>
+  <%= @dog.fixed %>
+</p>
+
+<p>
+  <strong>Vaccinated:</strong>
+  <%= @dog.vaccinated %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @dog.bio %>
+</p>
+
+<%= link_to 'Edit', edit_dog_path(@dog) %> |
+<%= link_to 'Back', dogs_path %>

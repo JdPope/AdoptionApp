@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  size: MyString
+  temperament: MyString
+  life_expectancy: MyString
+  description: MyText
+
+two:
+  name: MyString
+  size: MyString
+  temperament: MyString
+  life_expectancy: MyString
+  description: MyText

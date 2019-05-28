@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dog Breeds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dog</th>
+      <th>Breed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dog_breeds.each do |dog_breed| %>
+      <tr>
+        <td><%= dog_breed.dog %></td>
+        <td><%= dog_breed.breed %></td>
+        <td><%= link_to 'Show', dog_breed %></td>
+        <td><%= link_to 'Edit', edit_dog_breed_path(dog_breed) %></td>
+        <td><%= link_to 'Destroy', dog_breed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dog Breed', new_dog_breed_path %>
