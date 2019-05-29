@@ -1,9 +1,14 @@
+
+<h1>Hello!</h1>
+<%= @owner.name %>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @owner.name %>
-</p>
+<% @dogs.each do |dog| %>
+<%=link_to dog.name, dog%>
+<%= image_tag dog.image_url%>
+<% end %>
 
+
+<%= link_to 'Destroy', owner_path(@owner) %>
 <%= link_to 'Edit', edit_owner_path(@owner) %> |
 <%= link_to 'Back', owners_path %>
