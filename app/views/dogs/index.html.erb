@@ -21,12 +21,12 @@
   <tbody>
     <% @dogs.each do |dog| %>
       <tr>
-        <td><%= dog.name %></td>
+        <td><%= link_to dog.name, dog_path(dog.id) %></td>
         <td><%= dog.age %></td>
         <td><%= dog.size %></td>
         <td><%= dog.kids_compatible %></td>
         <td><%= dog.pets_compatible %></td>
-        <td><%= dog.image_url %></td>
+        <td><%= image_tag dog.image_url %></td>
         <td><%= dog.fixed %></td>
         <td><%= dog.vaccinated %></td>
         <td><%= dog.bio %></td>
