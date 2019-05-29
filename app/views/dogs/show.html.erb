@@ -9,7 +9,7 @@
   <strong>Breeds:</strong>
 
   <% @breeds.each do |breed|%>
-  
+
   <%= link_to breed.name, breed_path(breed) %>
   <%end%>
 </p>
@@ -55,5 +55,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_dog_path(@dog) %> |
+<%= link_to 'Adopt This Dog!', edit_dog_path(@dog) %> |
 <%= link_to 'Back', dogs_path %>
