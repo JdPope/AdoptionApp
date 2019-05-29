@@ -10,6 +10,9 @@ class OwnersController < ApplicationController
   # GET /owners/1
   # GET /owners/1.json
   def show
+    #@dogs = Dog.all
+    @owner = Owner.find(params[:id])
+    @dogs = Dog.select{|dog| dog.owner_id == @owner.id}
   end
 
   # GET /owners/new
