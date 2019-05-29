@@ -17,8 +17,7 @@
       <tr>
         <td><%= trainer.name %></td>
         <td><%= trainer.bio %></td>
-        <td><%= trainer.availble_on_weekends %></td>
-        <td><%= link_to 'Show', trainer %></td>
+        <td><%= trainer.available_on_weekends %></td>
         <td><%= link_to 'Edit', edit_trainer_path(trainer) %></td>
         <td><%= link_to 'Destroy', trainer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
