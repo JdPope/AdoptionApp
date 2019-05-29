@@ -11,52 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+
 
   <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age %>
+    <%= form.label :owner_id %>
+    <%= form.collection_select :owner_id, Owner.all, :id, :name  %>
   </div>
 
-  <div class="field">
-    <%= form.label :size %>
-    <%= form.text_field :size %>
-  </div>
-
-  <div class="field">
-    <%= form.label :kids_compatible %>
-    <%= form.check_box :kids_compatible %>
-  </div>
-
-  <div class="field">
-    <%= form.label :pets_compatible %>
-    <%= form.check_box :pets_compatible %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :fixed %>
-    <%= form.check_box :fixed %>
-  </div>
-
-  <div class="field">
-    <%= form.label :vaccinated %>
-    <%= form.check_box :vaccinated %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bio %>
-    <%= form.text_area :bio %>
-  </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Adopt This Dog!" %>
   </div>
 <% end %>
