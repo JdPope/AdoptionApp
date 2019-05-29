@@ -226,7 +226,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.3)
   rspec (~> 3.8)
-  rspec-rails
+  rspec-rails (~> 3.8)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
