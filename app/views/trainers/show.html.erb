@@ -15,5 +15,10 @@
   <%= @trainer.available_on_weekends %>
 </p>
 
-<%= link_to 'Edit', edit_trainer_path(@trainer) %> |
+<% @dogs.each do |dog| %>
+<%=link_to dog.name, dog%>
+<%= image_tag dog.image_url%>
+<% end %>
+
+<%= link_to 'Sign Your Dog Up For Training with!', edit_trainer_path(@trainer) %> |
 <%= link_to 'Back', trainers_path %>
