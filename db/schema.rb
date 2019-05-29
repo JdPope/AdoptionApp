@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_184145) do
   create_table "trainers", force: :cascade do |t|
     t.string "name"
     t.text "bio"
-    t.boolean "availble_on_weekends"
+    t.boolean "available_on_weekends"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
