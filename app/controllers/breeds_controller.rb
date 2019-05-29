@@ -4,7 +4,6 @@ class BreedsController < ApplicationController
   # GET /breeds
   # GET /breeds.json
   def index
-    @breeds = Breed.all
   end
 
   # GET /breeds/1
@@ -14,7 +13,6 @@ class BreedsController < ApplicationController
 
   # GET /breeds/new
   def new
-    @breed = Breed.new
   end
 
   # GET /breeds/1/edit
@@ -24,41 +22,16 @@ class BreedsController < ApplicationController
   # POST /breeds
   # POST /breeds.json
   def create
-    @breed = Breed.new(breed_params)
-
-    respond_to do |format|
-      if @breed.save
-        format.html { redirect_to @breed, notice: 'Breed was successfully created.' }
-        format.json { render :show, status: :created, location: @breed }
-      else
-        format.html { render :new }
-        format.json { render json: @breed.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /breeds/1
   # PATCH/PUT /breeds/1.json
   def update
-    respond_to do |format|
-      if @breed.update(breed_params)
-        format.html { redirect_to @breed, notice: 'Breed was successfully updated.' }
-        format.json { render :show, status: :ok, location: @breed }
-      else
-        format.html { render :edit }
-        format.json { render json: @breed.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # DELETE /breeds/1
   # DELETE /breeds/1.json
   def destroy
-    @breed.destroy
-    respond_to do |format|
-      format.html { redirect_to breeds_url, notice: 'Breed was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   private

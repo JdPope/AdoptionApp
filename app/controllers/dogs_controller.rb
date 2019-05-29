@@ -10,6 +10,11 @@ class DogsController < ApplicationController
   # GET /dogs/1
   # GET /dogs/1.json
   def show
+    @dogbreeds = DogBreed.select{ |dogbreed| dogbreed.dog_id == @dog.id }
+    @breeds = @dogbreeds.map do |dogbreed|
+      Breed.find(dogbreed.breed_id)
+    end
+
   end
 
   # GET /dogs/new

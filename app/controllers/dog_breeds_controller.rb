@@ -4,7 +4,6 @@ class DogBreedsController < ApplicationController
   # GET /dog_breeds
   # GET /dog_breeds.json
   def index
-    @dog_breeds = DogBreed.all
   end
 
   # GET /dog_breeds/1
@@ -14,7 +13,6 @@ class DogBreedsController < ApplicationController
 
   # GET /dog_breeds/new
   def new
-    @dog_breed = DogBreed.new
   end
 
   # GET /dog_breeds/1/edit
@@ -24,41 +22,16 @@ class DogBreedsController < ApplicationController
   # POST /dog_breeds
   # POST /dog_breeds.json
   def create
-    @dog_breed = DogBreed.new(dog_breed_params)
-
-    respond_to do |format|
-      if @dog_breed.save
-        format.html { redirect_to @dog_breed, notice: 'Dog breed was successfully created.' }
-        format.json { render :show, status: :created, location: @dog_breed }
-      else
-        format.html { render :new }
-        format.json { render json: @dog_breed.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /dog_breeds/1
   # PATCH/PUT /dog_breeds/1.json
   def update
-    respond_to do |format|
-      if @dog_breed.update(dog_breed_params)
-        format.html { redirect_to @dog_breed, notice: 'Dog breed was successfully updated.' }
-        format.json { render :show, status: :ok, location: @dog_breed }
-      else
-        format.html { render :edit }
-        format.json { render json: @dog_breed.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # DELETE /dog_breeds/1
   # DELETE /dog_breeds/1.json
   def destroy
-    @dog_breed.destroy
-    respond_to do |format|
-      format.html { redirect_to dog_breeds_url, notice: 'Dog breed was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   private

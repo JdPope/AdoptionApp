@@ -6,6 +6,15 @@
 </p>
 
 <p>
+  <strong>Breeds:</strong>
+
+  <% @breeds.each do |breed|%>
+  
+  <%= link_to breed.name, breed_path(breed) %>
+  <%end%>
+</p>
+
+<p>
   <strong>Age:</strong>
   <%= @dog.age %>
 </p>
@@ -44,6 +53,7 @@
   <strong>Bio:</strong>
   <%= @dog.bio %>
 </p>
+
 
 <%= link_to 'Edit', edit_dog_path(@dog) %> |
 <%= link_to 'Back', dogs_path %>
