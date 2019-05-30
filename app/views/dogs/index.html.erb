@@ -31,7 +31,7 @@
           <li class="list-group-item">Vaccinated? <%= vacc == "true"? "Yes" : "No"  %></li>
           <li class="list-group-item">Bio: <%= dog.bio %></li>
           <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(dog) %></li>
-          <li class="list-group-item"><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          
         </ul>
       </div>
       <div class="col-8">
