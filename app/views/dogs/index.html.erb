@@ -1,42 +1,48 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
 
-<h1>Dogs</h1>
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Size</th>
-      <th>Kids compatible</th>
-      <th>Pets compatible</th>
-      <th>Image url</th>
-      <th>Fixed</th>
-      <th>Vaccinated</th>
-      <th>Bio</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <h1>Dogs</h1>
 
-  <tbody>
-    <% @dogs.each do |dog| %>
-      <tr>
-        <td><%= link_to dog.name, dog_path(dog.id) %></td>
-        <td><%= dog.age %></td>
-        <td><%= dog.size %></td>
-        <td><%= dog.kids_compatible %></td>
-        <td><%= dog.pets_compatible %></td>
-        <td><%= image_tag dog.image_url %></td>
-        <td><%= dog.fixed %></td>
-        <td><%= dog.vaccinated %></td>
-        <td><%= dog.bio %></td>
-        <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
-        <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
-<%= link_to 'New Dog', new_dog_path %>
+
+      <% @dogs.each do |dog| %>
+          <div class="row">
+            <div class="col-4">
+        <ul class = "list-group">
+          <li class="list-group-item">Name: <%= link_to dog.name, dog_path(dog.id) %></li>
+          <li class="list-group-item">Age: <%= dog.age %></li>
+          <li class="list-group-item">Size: <%= dog.size %></li>
+          <% kids = dog.kids_compatible.to_s %>
+          <li class="list-group-item">Kid Friendly? <%= kids == "true"? "Yes" : "No"  %></li>
+          <% pets = dog.pets_compatible.to_s %>
+          <li class="list-group-item">Pet Friendly? <%= pets == "true"? "Yes" : "No" %></li>
+          <% fix = dog.fixed.to_s %>
+          <li class="list-group-item">Fixed? <%= fix == "true"? "Yes" : "No"  %></li>
+          <% vacc = dog.vaccinated.to_s %>
+          <li class="list-group-item">Vaccinated? <%= vacc == "true"? "Yes" : "No"  %></li>
+          <li class="list-group-item">Bio: <%= dog.bio %></li>
+          <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(dog) %></li>
+          <li class="list-group-item"><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        </ul>
+      </div>
+      <div class="col-8">
+        <li class="list-group-item"> <%= image_tag dog.image_url, :class => "img-fluid" %></li>
+      </div>
+      </div>
+      <% end %>
+
+  <br>
+  <%= link_to 'New Dog', new_dog_path %>
+
+  </div>
+  </body>
+</html>
