@@ -16,7 +16,7 @@ describe 'Owner' do
     @owner = Owner.create(name: "Joe")
   end
 
-  it 'has a name' do
+  it 'removes the instance' do
     expect{@owner.destroy}.to change {Owner.count}
   end
 

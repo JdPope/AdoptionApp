@@ -1,13 +1,12 @@
 
-<h1>Hello!</h1>
-<%= @owner.name %>
+<h1><%= "Hello, #{@owner.name}!" %></h1>
 <p id="notice"><%= notice %></p>
 
 <% @dogs.each do |dog| %>
 <%=link_to dog.name, dog%>
-<%= image_tag dog.image_url%>
+<p><%= image_tag dog.image_url%></p>
 <% end %>
 
 
 <%= link_to 'Edit', edit_owner_path(@owner) %> |
-<%= link_to 'Back', owners_path %> 
+<%= link_to 'Back', owners_path %>

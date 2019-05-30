@@ -1,20 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @trainer.name %>
-</p>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @trainer.bio %>
-</p>
+<div class="row">
+<div class="col-4">
+<ul class ="list-group">
+<li class="list-group-item">Name: <%= @trainer.name %></li>
+<li class="list-group-item">Bio: <%= @trainer.bio %></li>
+<% avail = @trainer.available_on_weekends.to_s %>
+<li class="list-group-item">Available on weekends? <%= avail == "true"? "Yes" : "No" %></li>
+</ul>
+</div>
+<div class="col-8">
+<li class="list-group-item"> <%= image_tag "http://static1.squarespace.com/static/52e05773e4b03a73a07d892c/530274dfe4b05f10a2c7bb18/5b20754a0e2e72c2ed6a37ba/1538001231194/?format=1500w" %></li>
+</div>
+</div>
 
-<p>
-  <strong>Available on weekends?</strong>
-  <% avail = @trainer.available_on_weekends.to_s %>
-  <%= avail == "true"? "Yes" : "No" %>
-</p>
+
 
 <% @dogs.each do |dog| %>
 <%=link_to dog.name, dog%>
@@ -22,4 +23,4 @@
 <% end %>
 
 
-<%= link_to 'Back', trainers_path %> 
+<%= link_to 'Back', trainers_path %>
