@@ -20,10 +20,8 @@
   <li class="list-group-item">Fixed? <%= fix == "true"? "Yes" : "No" %>
   <% vacc = @dog.vaccinated.to_s %>
   <li class="list-group-item">Vaccinated? <%= vacc == "true"? "Yes" : "No" %>
-</ul>
-  <%= link_to 'Adopt', edit_dog_path(@dog) %> |
-  <%= link_to 'Back', dogs_path %>
-
+  <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(@dog) %></li>
+  </ul>
 </div>
 <div class="col-8">
 <li class="list-group-item"> <%= image_tag @dog.image_url, :class => "img-fluid" %></li>
