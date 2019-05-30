@@ -18,8 +18,11 @@
     <%= form.collection_select :owner_id, Owner.all, :id, :name  %>
   </div>
 
-<h4>Would You Like to Sign Your New Pup up for Puppy Classes?</h4>
-<h5>Please Select From One of Our Qualified Trainers:</h5>
+<br>
+
+<h4>Would you like to sign up your dog for training?</h4>
+<h5>Please select one of our qualified trainers.</h5>
+<%= link_to 'View Trainers', trainers_path %>
   <div class="field">
     <%= form.label :trainer_id %>
     <%= form.collection_select :trainer_id, Trainer.all, :id, :name  %>
@@ -28,6 +31,6 @@
 
 
   <div class="actions">
-    <%= form.submit "Submit Your Selections"%>
+    <%= form.submit "Submit"%>
   </div>
 <% end %>
