@@ -1,9 +1,9 @@
-# README
+ README
 
-##PickUpPup
+PickUpPup
 written with Ruby on Rails
 
-*Purpose
+Purpose
 *A ROR app that helps a user manage the pet adoption process by tracking a pup's attributes and assigning a pup a trainer!
 *Allows the user to browse through pups, adopt that pup, and sign them up for training.
 *Fork / Clone repository
@@ -17,3 +17,4 @@ written with Ruby on Rails
 *Copyright (c) 2019, * Jesse Pope and Tejas Cousik
 *Authors.md for our contacts / Git
 *Made with love at Flatiron School A ROR application with database storage (SQLite3)
+
