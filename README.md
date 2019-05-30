@@ -1,6 +1,6 @@
 # README
 
-PickUpPup
+##PickUpPup
 written with Ruby on Rails
 
 *Purpose
