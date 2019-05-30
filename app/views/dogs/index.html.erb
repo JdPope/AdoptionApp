@@ -11,38 +11,26 @@
 
     <h1>Dogs</h1>
 
+    <%= link_to 'New Dog', new_dog_path %>
 
-
-
-      <% @dogs.each do |dog| %>
-          <div class="row">
-            <div class="col-4">
+    <% @dogs.each do |dog| %>
+        <div class="row">
+        <div class="col-4">
         <ul class = "list-group">
           <li class="list-group-item">Name: <%= link_to dog.name, dog_path(dog.id) %></li>
           <li class="list-group-item">Age: <%= dog.age %></li>
           <li class="list-group-item">Size: <%= dog.size %></li>
-          <% kids = dog.kids_compatible.to_s %>
-          <li class="list-group-item">Kid Friendly? <%= kids == "true"? "Yes" : "No"  %></li>
-          <% pets = dog.pets_compatible.to_s %>
-          <li class="list-group-item">Pet Friendly? <%= pets == "true"? "Yes" : "No" %></li>
-          <% fix = dog.fixed.to_s %>
-          <li class="list-group-item">Fixed? <%= fix == "true"? "Yes" : "No"  %></li>
-          <% vacc = dog.vaccinated.to_s %>
-          <li class="list-group-item">Vaccinated? <%= vacc == "true"? "Yes" : "No"  %></li>
           <li class="list-group-item">Bio: <%= dog.bio %></li>
           <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(dog) %></li>
           <li class="list-group-item"><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
         </ul>
-      </div>
-      <div class="col-8">
+        </div>
+        <div class="col-8">
         <li class="list-group-item"> <%= image_tag dog.image_url, :class => "img-fluid" %></li>
-      </div>
-      </div>
-      <% end %>
+        </div>
+        </div>
+        <% end %>
 
-  <br>
-  <%= link_to 'New Dog', new_dog_path %>
-
-  </div>
+    </div>
   </body>
 </html>

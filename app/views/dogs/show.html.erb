@@ -1,62 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @dog.name %>
-</p>
-
-<p>
-  <strong>Breeds:</strong>
-
-  <% @breeds.each do |breed|%>
-
-  <%= link_to breed.name, breed_path(breed) %>
-  <%end%>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @dog.age %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @dog.size %>
-</p>
-
-<p>
-  <strong>Kids compatible?</strong>
+<div class="row">
+<div class="col-4">
+<ul class = "list-group">
+  <li class="list-group-item">Name: <%= link_to @dog.name, dog_path(@dog.id) %></li>
+  <li class="list-group-item">Age: <%= @dog.age %></li>
+  <li class="list-group-item">Size: <%= @dog.size %></li>
+  <li class="list-group-item">Bio: <%= @dog.bio %></li>
   <% kid_comp = @dog.kids_compatible.to_s %>
-  <%= kid_comp == "true"? "Yes" : "No" %>
-
-</p>
-
-<p>
-  <strong>Pets compatible?</strong>
-  <% pets_comp = @dog.pets_compatible %>
-  <%= pets_comp == "true"? "Yes" : "No" %>
-</p>
-
-<p>
-  <strong>Fixed?</strong>
+  <li class="list-group-item">Kid Friendly? <%= kid_comp == "true"? "Yes" : "No" %>
+  <% pets_comp = @dog.pets_compatible.to_s %>
+  <li class="list-group-item">Pet Friendly? <%= pets_comp == "true"? "Yes" : "No" %>
   <% fix = @dog.fixed.to_s %>
-  <%= fix == "true"? "Yes" : "No"  %>
-</p>
-
-<p>
-  <strong>Vaccinated?</strong>
+  <li class="list-group-item">Fixed? <%= fix == "true"? "Yes" : "No" %>
   <% vacc = @dog.vaccinated.to_s %>
-    <%= vacc == "true"? "Yes" : "No"  %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @dog.bio %>
-</p>
-
-<p>
-  <%= link_to image_tag @dog.image_url %>
-</p>
-
-<%= link_to 'Adopt', edit_dog_path(@dog) %> |
-<%= link_to 'Back', dogs_path %>
+  <li class="list-group-item">Vaccinated? <%= vacc == "true"? "Yes" : "No" %>
+  <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(@dog) %></li>
+  <li class="list-group-item"><%= link_to 'Destroy', @dog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+</ul>
+</div>
+<div class="col-8">
+<li class="list-group-item"> <%= image_tag @dog.image_url, :class => "img-fluid" %></li>
+</div>
+</div>
