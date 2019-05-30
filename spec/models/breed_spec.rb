@@ -10,3 +10,14 @@ describe 'Breed' do
   end
 
 end
+
+describe 'Breed' do
+  before do
+    @breed = Breed.create(name: "lab")
+  end
+
+  it 'has a name' do
+    expect{@breed.destroy}.to change {Breed.count}
+  end
+
+end

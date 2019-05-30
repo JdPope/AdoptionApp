@@ -10,3 +10,14 @@ describe 'Trainer' do
   end
 
 end
+
+describe 'Trainer' do
+  before do
+    @trainer = Trainer.create(name: "Zirk")
+  end
+
+  it 'has a name' do
+    expect{@trainer.destroy}.to change {Trainer.count}
+  end
+
+end

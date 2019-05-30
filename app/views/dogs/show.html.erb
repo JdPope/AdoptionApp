@@ -2,8 +2,13 @@
 
 <div class="row">
 <div class="col-4">
-<ul class = "list-group">
+<ul class ="list-group">
   <li class="list-group-item">Name: <%= @dog.name %></li>
+  <li class="list-group-item"> Breed:
+  <% @breeds.each do |breed| %>
+  <%= link_to breed.name, breed_path(breed) %>
+  <% end %>
+  </li>
   <li class="list-group-item">Age: <%= @dog.age %></li>
   <li class="list-group-item">Size: <%= @dog.size %></li>
   <li class="list-group-item">Bio: <%= @dog.bio %></li>
