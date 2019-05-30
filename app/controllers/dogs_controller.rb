@@ -5,7 +5,7 @@ class DogsController < ApplicationController
   # GET /dogs.json
   def index
 
-    @dogs = Dog.all
+    @dogs = Dog.all.select{ |dog| dog.owner_id == nil}
   end
 
   # GET /dogs/1

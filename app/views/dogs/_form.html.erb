@@ -13,16 +13,21 @@
   <% end %>
 
 
-
-
-
   <div class="field">
     <%= form.label :owner_id %>
     <%= form.collection_select :owner_id, Owner.all, :id, :name  %>
   </div>
 
+<h4>Would You Like to Sign Your New Pup up for Puppy Classes?</h4>
+<h5>Please Select From One of Our Qualified Trainers:</h5>
+  <div class="field">
+    <%= form.label :trainer_id %>
+    <%= form.collection_select :trainer_id, Trainer.all, :id, :name  %>
+  </div>
+
+
 
   <div class="actions">
-    <%= form.submit "Adopt this dog!"%>
+    <%= form.submit "Submit Your Selections"%>
   </div>
 <% end %>
