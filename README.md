@@ -4,6 +4,7 @@ PickUpPup
 written with Ruby on Rails
 
 Purpose
+
 *A ROR app that helps a user manage the pet adoption process by tracking a pup's attributes and assigning a pup a trainer!
 *Allows the user to browse through pups, adopt that pup, and sign them up for training.
 *Fork / Clone repository
