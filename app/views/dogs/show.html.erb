@@ -3,7 +3,7 @@
 <div class="row">
 <div class="col-4">
 <ul class = "list-group">
-  <li class="list-group-item">Name: <%= link_to @dog.name, dog_path(@dog.id) %></li>
+  <li class="list-group-item">Name: <%= @dog.name %></li>
   <li class="list-group-item">Age: <%= @dog.age %></li>
   <li class="list-group-item">Size: <%= @dog.size %></li>
   <li class="list-group-item">Bio: <%= @dog.bio %></li>
@@ -15,9 +15,10 @@
   <li class="list-group-item">Fixed? <%= fix == "true"? "Yes" : "No" %>
   <% vacc = @dog.vaccinated.to_s %>
   <li class="list-group-item">Vaccinated? <%= vacc == "true"? "Yes" : "No" %>
-  <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(@dog) %></li>
-  <li class="list-group-item"><%= link_to 'Destroy', @dog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
 </ul>
+  <%= link_to 'Adopt', edit_dog_path(@dog) %> |
+  <%= link_to 'Back', dogs_path %>
+
 </div>
 <div class="col-8">
 <li class="list-group-item"> <%= image_tag @dog.image_url, :class => "img-fluid" %></li>

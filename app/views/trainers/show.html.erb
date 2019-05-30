@@ -11,8 +11,9 @@
 </p>
 
 <p>
-  <strong>Available on weekends:</strong>
-  <%= @trainer.available_on_weekends %>
+  <strong>Available on weekends?</strong>
+  <% avail = @trainer.available_on_weekends.to_s %>
+  <%= avail == "true"? "Yes" : "No" %>
 </p>
 
 <% @dogs.each do |dog| %>
@@ -20,5 +21,6 @@
 <%= image_tag dog.image_url%>
 <% end %>
 
-<%= link_to 'Sign Your Dog Up For Training with!', edit_trainer_path(@trainer) %> |
-<%= link_to 'Back', trainers_path %>
+<%= link_to 'Assign Trainer', edit_trainer_path(@trainer) %> |
+<%= link_to 'Back', trainers_path %> |
+<%= link_to 'Dogs', dogs_path %>

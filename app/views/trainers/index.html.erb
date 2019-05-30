@@ -17,8 +17,9 @@
       <tr>
         <td><%= link_to trainer.name, trainer_path(trainer.id) %></td>
         <td><%= trainer.bio %></td>
-        <td><%= trainer.available_on_weekends %></td>
-        <td><%= link_to 'Edit', edit_trainer_path(trainer) %></td>
+        <% avail = trainer.available_on_weekends.to_s %>
+        <td><%= avail == "true"? "Yes" : "No"%></td>
+        <td><%= link_to 'Assign Trainer', edit_trainer_path(trainer) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +27,5 @@
 
 <br>
 
-<%= link_to 'New Trainer', new_trainer_path %>
+<%= link_to 'New Trainer', new_trainer_path %> |
+<%= link_to 'Dogs', dogs_path %>
