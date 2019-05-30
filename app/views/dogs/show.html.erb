@@ -26,27 +26,27 @@
 
 <p>
   <strong>Kids compatible:</strong>
-  <%= @dog.kids_compatible %>
+  <% kid_comp = @dog.kids_compatible.to_s %>
+  <%= kid_comp == "true"? "Yes" : "No" %>
+
 </p>
 
 <p>
   <strong>Pets compatible:</strong>
-  <%= @dog.pets_compatible %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= link_to image_tag @dog.image_url %>
+  <% pets_comp = @dog.pets_compatible %>
+  <%= pets_comp == "true"? "Yes" : "No" %>
 </p>
 
 <p>
   <strong>Fixed:</strong>
-  <%= @dog.fixed %>
+  <% fix = @dog.fixed.to_s %>
+  <%= fix == "true"? "Yes" : "No"  %>
 </p>
 
 <p>
   <strong>Vaccinated:</strong>
-  <%= @dog.vaccinated %>
+  <% vacc = @dog.vaccinated.to_s %>
+    <%= vacc == "true"? "Yes" : "No"  %>
 </p>
 
 <p>
@@ -54,6 +54,9 @@
   <%= @dog.bio %>
 </p>
 
+<p>
+  <%= link_to image_tag @dog.image_url %>
+</p>
 
-<%= link_to 'Adopt This Dog!', edit_dog_path(@dog) %> |
+<%= link_to 'Adopt', edit_dog_path(@dog) %> |
 <%= link_to 'Back', dogs_path %>
