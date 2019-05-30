@@ -14,10 +14,11 @@
  *= require_self
  */
 
+
  body {
    background-color: cornflowerblue ;
  }
 
  h1 {
    color: red;
-   font-family: veranda
+   font-family: veranda;
