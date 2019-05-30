@@ -20,4 +20,25 @@ describe 'Breed' do
     expect{@breed.destroy}.to change {Breed.count}
   end
 
+  describe 'Breed' do
+    before do
+      @lab = Breed.create(size: "Medium")
+    end
+
+    it 'has a size' do
+      expect(Breed.find_by(size: "Medium")).to eq(@lab)
+    end
+
+  end
+  describe 'Breed' do
+    before do
+      @lab = Breed.create(temperament: "Friendly")
+    end
+
+    it 'has a temperament' do
+      expect(Breed.find_by(temperament: "Friendly")).to eq(@lab)
+    end
+
+  end
+
 end
