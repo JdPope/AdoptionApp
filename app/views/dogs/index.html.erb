@@ -9,23 +9,25 @@
 
     <p id="notice"><%= notice %></p>
 
-    <h1>Dogs</h1>
+    <h1>Pups</h1>
 
     <% @dogs.each do |dog| %>
         <div class="row">
-        <div class="col-4">
-        <ul class ="list-group">
-          <li class="list-group-item">Name: <%= link_to dog.name, dog_path(dog.id) %></li>
-          <li class="list-group-item">Age: <%= dog.age %></li>
-          <li class="list-group-item">Size: <%= dog.size %></li>
-          <li class="list-group-item">Bio: <%= dog.bio %></li>
-          <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(dog) %></li>
+          <div class="col-4">
+            <ul class ="list-group">
+              <br>
+              <li class="list-group-item">Name: <%= link_to dog.name, dog_path(dog.id) %></li>
+              <br>
+              <li class="list-group-item">Age: <%= dog.age %></li>
+              <li class="list-group-item">Size: <%= dog.size %></li>
+              <li class="list-group-item">Bio: <%= dog.bio %></li>
+              <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(dog) %></li>
 
-        </ul>
-        </div>
-        <div class="col-8">
-        <li class="list-group-item"> <%= image_tag dog.image_url, :class => "img-fluid"%></li>
-        </div>
+            </ul>
+          </div>
+          <div class="col-4">
+            <li class="list-group-item"> <%= image_tag dog.image_url, :class => "img-fluid", :style => 'height: 350px'%></li>
+          </div>
         </div>
         <% end %>
 

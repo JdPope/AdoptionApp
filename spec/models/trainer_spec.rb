@@ -16,7 +16,7 @@ describe 'Trainer' do
     @trainer = Trainer.create(name: "Zirk")
   end
 
-  it 'has a name' do
+  it 'removes the instance' do
     expect{@trainer.destroy}.to change {Trainer.count}
   end
 
