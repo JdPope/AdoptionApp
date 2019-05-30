@@ -19,7 +19,6 @@
         <td><%= trainer.bio %></td>
         <% avail = trainer.available_on_weekends.to_s %>
         <td><%= avail == "true"? "Yes" : "No"%></td>
-        <td><%= link_to 'Assign Trainer', edit_trainer_path(trainer) %></td>
       </tr>
     <% end %>
   </tbody>
