@@ -22,9 +22,9 @@
           <li class="list-group-item">Age: <%= dog.age %></li>
           <li class="list-group-item">Size: <%= dog.size %></li>
           <% kids = dog.kids_compatible.to_s %>
-          <li class="list-group-item">Kid Friendly: <%= kids == "true"? "Yes" : "No"  %></li>
+          <li class="list-group-item">Kid Friendly? <%= kids == "true"? "Yes" : "No"  %></li>
           <% pets = dog.pets_compatible.to_s %>
-          <li class="list-group-item">Pet Friendly: <%= pets == "true"? "Yes" : "No" %></li>
+          <li class="list-group-item">Pet Friendly? <%= pets == "true"? "Yes" : "No" %></li>
           <% fix = dog.fixed.to_s %>
           <li class="list-group-item">Fixed? <%= fix == "true"? "Yes" : "No"  %></li>
           <% vacc = dog.vaccinated.to_s %>

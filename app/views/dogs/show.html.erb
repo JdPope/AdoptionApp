@@ -25,26 +25,26 @@
 </p>
 
 <p>
-  <strong>Kids compatible:</strong>
+  <strong>Kids compatible?</strong>
   <% kid_comp = @dog.kids_compatible.to_s %>
   <%= kid_comp == "true"? "Yes" : "No" %>
 
 </p>
 
 <p>
-  <strong>Pets compatible:</strong>
+  <strong>Pets compatible?</strong>
   <% pets_comp = @dog.pets_compatible %>
   <%= pets_comp == "true"? "Yes" : "No" %>
 </p>
 
 <p>
-  <strong>Fixed:</strong>
+  <strong>Fixed?</strong>
   <% fix = @dog.fixed.to_s %>
   <%= fix == "true"? "Yes" : "No"  %>
 </p>
 
 <p>
-  <strong>Vaccinated:</strong>
+  <strong>Vaccinated?</strong>
   <% vacc = @dog.vaccinated.to_s %>
     <%= vacc == "true"? "Yes" : "No"  %>
 </p>

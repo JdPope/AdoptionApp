@@ -12,21 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bio %>
-    <%= form.text_area :bio %>
-  </div>
-
-  <div class="field">
-    <%= form.label :available_on_weekends %>
-    <%= form.check_box :available_on_weekends %>
+    <%= form.label :owner_id %>
+    <%= form.collection_select :owner_id, Owner.all, :id, :name  %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Sign my dog up!" %>
   </div>
 <% end %>

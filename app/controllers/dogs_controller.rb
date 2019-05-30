@@ -4,6 +4,7 @@ class DogsController < ApplicationController
   # GET /dogs
   # GET /dogs.json
   def index
+
     @dogs = Dog.all
   end
 
@@ -74,6 +75,6 @@ class DogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dog_params
-      params.require(:dog).permit(:name, :age, :size, :kids_compatible, :pets_compatible, :image_url, :fixed, :vaccinated, :bio, :owner_id)
+      params.require(:dog).permit(:name, :age, :size, :kids_compatible, :pets_compatible, :image_url, :fixed, :vaccinated, :bio, :trainer_id, :owner_id)
     end
 end
