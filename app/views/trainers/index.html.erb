@@ -10,12 +10,18 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Trainers</h1>
-  <div class="row">
-    <div class="col-4"
+
+
+  <% @trainers.each do |trainer| %>
+    <div class="row">
+    <div class="col-6">
       <ul class ="list-group">
-        <% @trainers.each do |trainer| %>
-          <li class="list-group-item">Trainer:<%= link_to trainer.name, trainer_path(trainer.id) %></li>
-        <% end %>
+      <br>
+      <li class="list-group-item">Name: <%= link_to trainer.name, trainer_path(trainer.id) %></li>
+      <li class="list-group-item">Bio: <%= trainer.bio %></li>
+      <% avail = trainer.available_on_weekends.to_s %>
+      <li class="list-group-item">Available On Weekends? <%= avail == "true"? "Yes" : "No"%></li>
       </ul>
     </div>
-  </div>
+    </div>
+  <% end %>

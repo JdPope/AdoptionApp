@@ -19,6 +19,9 @@
    background-color: cornflowerblue ;
  }
 
- h1 { text-align: center;
-   color: red;
-   font-family: veranda;}
+
+ h1 {
+   color: #BA1F1F;
+   font-family: veranda;
+   text-align: center;
+ }

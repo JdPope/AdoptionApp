@@ -19,14 +19,6 @@
         
         <li class="list-group-item"><%= link_to dog.name, dog %></li>
 
-      </ul>
-    </div>
-    <div class="col-4">
-      <li class="list-group-item"> <%= image_tag dog.image_url, :class => "img-fluid", :style => 'height: 350px'%></li>
-    </div>
-    </div>
-    <% end %>
-    </div>
-    <%= link_to 'Back', owners_path %>
-  </body>
-</html>
+
+<h3><%= link_to 'Edit Name', edit_owner_path(@owner) %> | <%= link_to 'Back', owners_path %></h3>
+
