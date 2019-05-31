@@ -1,25 +1,33 @@
-# README
+ README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+PickUpPup
+written with Ruby on Rails
 
-Things you may want to cover:
+Purpose
 
-* Ruby version
-I hope this shows up!
+*A ROR app that helps a user manage the pet adoption process by tracking a pup's attributes and assigning a pup a trainer!
 
-* System dependencies
+*Allows the user to browse through pups, adopt that pup, and sign them up for training.
 
-* Configuration
+*Fork / Clone repository
 
-* Database creation
+*cd into folder
 
-* Database initialization
+*bundle install required gems
 
-* How to run the test suite
+*Setup database with rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+*seed your database with existing data points using rails db:seed
 
-* Deployment instructions
+*Run rails s and browse our app on your local server
 
-* ...
+*Usage
+
+*This software falls under MIT License
+
+*Copyright (c) 2019, * Jesse Pope and Tejas Cousik
+
+*Authors.md for our contacts / Git
+
+*Made with love at Flatiron School A ROR application with database storage (SQLite3)
+

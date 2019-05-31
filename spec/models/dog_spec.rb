@@ -16,7 +16,7 @@ describe 'Dog' do
     @dog = Dog.create(name: "Skippy")
   end
 
-  it 'has a name' do
+  it 'removes the instance' do
     expect{@dog.destroy}.to change {Dog.count}
   end
 
