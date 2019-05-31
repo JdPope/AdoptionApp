@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title></title>
+ </head>
+ <body>
+   <div class="container">
+
+   <p id="notice"><%= notice %></p>
+<h1><%= "Hello, #{@owner.name}!" %></h1>
+<h3><%= "You Have Not Adopted Any Dogs Yet - Visit Our Pups Page!" %></h3>
+
+
+<h4><%= link_to 'Edit Name', edit_owner_path(@owner) %> | <%= link_to 'Back', owners_path %></h4>
