@@ -21,7 +21,7 @@
 <div class="row">
 <div class="col-5">
 <ul class ="list-group">
-<li class ="list-group-item"><%= "These are the dogs that #{@trainer.name} is working with." %></li>
+<li class ="list-group-item"><%= "These are the dogs that #{@trainer.name} is training." %></li>
 <% @dogs.each do |dog| %>
 <li class ="list-group-item"><%=link_to dog.name, dog%></li>
 <% end %>
