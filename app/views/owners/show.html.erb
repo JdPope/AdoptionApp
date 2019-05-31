@@ -1,20 +1,6 @@
 
-
-   <p id="notice"><%= notice %></p>
-<h1><%= "Hello, #{@owner.name}!" %></h1>
-
-
-<% @dogs.each do |dog| %>
-  <div class="row">
-  <div class="col-4">
-    <ul class ="list-group">
-      <li class="list-group-item"><%= "These are the dogs you've adopted." %>
-      <li class="list-group-item"><%= link_to dog.name, dog %></li>
-    </ul>
-  </div>
-  </div>
+<% if @dogs.length >=  1 %>
+  <%= render 'show_form', owner: @owner %>
+<% else %>
+  <%= render 'alt_form', owner: @owner %>
 <% end %>
-
-<br>
-<br>
-<h4><%= link_to 'Edit Name', edit_owner_path(@owner) %> | <%= link_to 'Back', owners_path %></h4>
