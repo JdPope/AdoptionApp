@@ -13,7 +13,7 @@
 
     <% @dogs.each do |dog| %>
         <div class="row">
-          <div class="col-4">
+          <div class="col-6">
             <ul class ="list-group">
               <br>
               <li class="list-group-item">Name: <%= link_to dog.name, dog_path(dog.id) %></li>
@@ -25,8 +25,8 @@
 
             </ul>
           </div>
-          <div class="col-4">
-            <li class="list-group-item"> <%= image_tag dog.image_url, :class => "img-fluid", :style => 'height: 350px'%></li>
+          <div class="col-5">
+            <li class="list-group-item img_cont"> <%= image_tag dog.image_url, :class => "img-fluid", :style => 'height: 350px'%></li>
           </div>
         </div>
         <% end %>

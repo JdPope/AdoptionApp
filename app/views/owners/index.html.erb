@@ -2,25 +2,20 @@
 
 <h1>Owners</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @owners.each do |owner| %>
-      <tr>
-        <td><%= owner.name %></td>
-        <td><%= link_to 'Your Profile', owner %></td>
+  <% @owners.each do |owner| %>
+    <div class="row">
+    <div class="col-6">
+      <ul class ="list-group">
+      <br>
+      <li class="list-group-item">Name: <%= owner.name %></li>
+      <li class="list-group-item"><%= link_to 'Profile Page', owner %></li>
+      </ul>
+    </div>
+    </div>
+  <% end %>
 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'New Owner', new_owner_path %> 
+<h4><%= link_to 'New Owner', new_owner_path %> | <%= link_to 'Back', welcome_path(:index) %></h4>
