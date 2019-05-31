@@ -1,27 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+
 <p id="notice"><%= notice %></p>
 
 <h1>Trainers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Bio</th>
-      <th>Available on weekends</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @trainers.each do |trainer| %>
-      <tr>
-        <td><%= link_to trainer.name, trainer_path(trainer.id) %></td>
-        <td><%= trainer.bio %></td>
-        <% avail = trainer.available_on_weekends.to_s %>
-        <td><%= avail == "true"? "Yes" : "No"%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+  <div class="row">
+    <div class="col-4"
+      <ul class ="list-group">
+        <% @trainers.each do |trainer| %>
+          <li class="list-group-item">Trainer:<%= link_to trainer.name, trainer_path(trainer.id) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
