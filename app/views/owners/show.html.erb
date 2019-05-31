@@ -10,15 +10,18 @@
 
    <p id="notice"><%= notice %></p>
 <h1><%= "Hello, #{@owner.name}!" %></h1>
-<h2><%= "These Are The Dogs You've Successfully Adopted!" %></h2>
+<h3><%= "These are the dogs you've adopted." %></h3>
 
 <% @dogs.each do |dog| %>
   <div class="row">
-    <div class="col-4">
-      <ul class ="list-group">
-        
-        <li class="list-group-item"><%= link_to dog.name, dog %></li>
+  <div class="col-4">
+    <ul class ="list-group">
+      <li class="list-group-item"><%= link_to dog.name, dog %></li>
+    </ul>
+  </div>
+  </div>
+<% end %>
 
-
-<h3><%= link_to 'Edit Name', edit_owner_path(@owner) %> | <%= link_to 'Back', owners_path %></h3>
-
+<br>
+<br>
+<h4><%= link_to 'Edit Name', edit_owner_path(@owner) %> | <%= link_to 'Back', owners_path %></h4>
