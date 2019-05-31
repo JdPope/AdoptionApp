@@ -1,26 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+
 <p id="notice"><%= notice %></p>
 
 <h1>Owners</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="row">
+    <div class="col-4"
+      <ul class ="list-group">
+        <% @owners.each do |owner| %>
 
-  <tbody>
-    <% @owners.each do |owner| %>
-      <tr>
-        <td><%= owner.name %></td>
-        <td><%= link_to 'Your Profile', owner %></td>
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Owner', new_owner_path %> 
+          <li class="list-group-item">User Name: <%= link_to owner.name, owner_path(owner.id) %></li>
+        <% end %>
+        <li class="list-group-item"> <%= link_to 'Create New User Account', new_owner_path %></li>
+      </ul>
+    </div>
+  </div>

@@ -13,6 +13,14 @@
 
     <% @dogs.each do |dog| %>
         <div class="row">
+
+        <div class="col-4">
+        <ul class ="list-group">
+          <li class="list-group-item">Name: <%= link_to dog.name, dog_path(dog.id) %></li>
+          <li class="list-group-item">Age: <%= dog.age %></li>
+          <li class="list-group-item">Size: <%= dog.size %></li>
+          <li class="list-group-item">Bio: <%= dog.bio %></li>
+          <h3 class="list-group-item"><%= link_to 'Adopt', edit_dog_path(dog) %></h3>
           <div class="col-4">
             <ul class ="list-group">
               <br>
@@ -22,6 +30,7 @@
               <li class="list-group-item">Size: <%= dog.size %></li>
               <li class="list-group-item">Bio: <%= dog.bio %></li>
               <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(dog) %></li>
+
 
             </ul>
           </div>
