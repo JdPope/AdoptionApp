@@ -3,6 +3,7 @@ class DogsController < ApplicationController
 
   # GET /dogs
   # GET /dogs.json
+
   def index
 
     @dogs = Dog.all.select{ |dog| dog.owner_id == nil}
@@ -66,6 +67,9 @@ class DogsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
