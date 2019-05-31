@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-<div class="col-4">
+<div class="col-6">
 <ul class ="list-group">
   <li class="list-group-item">Name: <%= @dog.name %></li>
   <li class="list-group-item"> Breed:
@@ -23,7 +23,7 @@
   <li class="list-group-item"><%= link_to 'Adopt', edit_dog_path(@dog) %></li>
   </ul>
 </div>
-<div class="col-4">
+<div class="col-5">
 <li class="list-group-item"> <%= image_tag @dog.image_url, :class => "img-fluid" %></li>
 </div>
 </div>
